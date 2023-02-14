@@ -9,7 +9,7 @@ public class RomanNumeralConstraint implements Validate {
 
     @Override
     public boolean validate(String input) {
-        Matcher matcher = PATTERN.matcher(input);
+        Matcher matcher = PATTERN.matcher(input.toUpperCase());
 
         if (input == null || input.isEmpty() || input.trim().isEmpty()){
             return false;

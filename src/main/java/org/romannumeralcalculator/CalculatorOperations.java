@@ -12,6 +12,6 @@ public class CalculatorOperations {
     }
 
     public String executeCalculation(String valueA, String valueB){
-        return convertRomanNumeral.convertNumericValueToRomanNumeralSymbol(calculate.calculate(convertRomanNumeral.convertRomanNumeralSymbolToNumericValue(valueA), convertRomanNumeral.convertRomanNumeralSymbolToNumericValue(valueB)));
+        return convertRomanNumeral.convertNumericValueToRomanNumeralSymbol(calculate.calculate(convertRomanNumeral.convertRomanNumeralSymbolToNumericValue(valueA.toUpperCase()), convertRomanNumeral.convertRomanNumeralSymbolToNumericValue(valueB.toUpperCase())));
     }
 }

@@ -113,4 +113,11 @@ class ValidationConstraintTest {
         assertEquals(Message.INVALID_OPERATOR.getMessage(),validationConstraint.getMessage());
     }
 
+    @Test
+    void testRomanNumeralConstraintValidSymbolLowerCase() {
+        validationConstraint.setValidate(new RomanNumeralConstraint());
+        boolean result = validationConstraint.validate("i");
+        assertTrue(result);
+    }
+
 }

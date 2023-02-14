@@ -66,6 +66,18 @@ class CalculatorOperationsTest {
         assertEquals("I", result);
     }
 
+    @Test
+    void testLowerCase() {
+        calculatorOperations.setCalculate(new Addition());
+        String result = calculatorOperations.executeCalculation("i", "II");
+        assertEquals("III", result);
+    }
 
+    @Test
+    void testLowerCase2() {
+        calculatorOperations.setCalculate(new Addition());
+        String result = calculatorOperations.executeCalculation("i", "ii");
+        assertEquals("III", result);
+    }
 
 }
